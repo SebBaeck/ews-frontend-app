@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title *ngIf="!showSearchbar">My courses</ion-title>
+
+    <ion-buttons *ngIf="!showSearchbar" end>
+      <button ion-button icon-only (click)="setShowSearchbar(true)">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-searchbar  *ngIf="showSearchbar"
+                    [(ngModel)]="searchQuery"
+                    (ionInput)="doSearch()"
+                    (ionClear)="clearSearchbar()"
+                    [showCancelButton]="true"
+                    (ionCancel)="setShowSearchbar(false)">
+    </ion-searchbar>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let kurs of filteredKurse">
+      <button ion-item  (click)="showKursDetails(kurs)">
+        {{kurs.name}} <span float-right>registered:{{kurs.mitgliederAngemeldet.length}}</span>
+      </button>
+      <ion-item-options side="right">
+        <button (click)="showCourseStats(kurs.id)" ion-button color="secondary">
+          <ion-icon name="stats"></ion-icon>
+          Stats
+        </button>
+        <button (click)="showMemberList(kurs)" ion-button color="primary">
+          <ion-icon name="people"></ion-icon>
+          Members
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

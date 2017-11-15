@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+
+    <ion-title>{{pageTitle}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="startScan()">
+        <ion-icon name="barcode"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="showHelp()">
+        <ion-icon name="help"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <button color="secondary" ion-item *ngFor="let greenMember of greenMemberList">
+      <h2>{{greenMember.vorname}} {{greenMember.nachname}}</h2>
+    </button>
+    <button color="danger" ion-item *ngFor="let redMember of redMemberList">
+      <h2>{{redMember.vorname}} {{redMember.nachname}}</h2>
+    </button>
+    <button color="dark" ion-item *ngFor="let blackMember of blackMemberList">
+      <h2>{{blackMember.vorname}} {{blackMember.nachname}}</h2>
+    </button>
+
+  </ion-list>
+
+</ion-content>
