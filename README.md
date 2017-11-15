@@ -1,26 +1,15 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## EWS-Fontend Ionic App
 
-## How to use this template
+Dieses Frontend dient als Client für den EWS-Webserver: https://github.com/SebBaeck/ews-server
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Start der App ist eine Login-Seite, wo man sich mit seinen Trainer-Zugangsdaten anmelden muss.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+Durch die folgenden Seiten wird man durch eine übersichtliche Oberfläche begleitet.
 
-### With the Ionic CLI:
+Das Erfassen eines Mitgliedes für einen bestimmten Termin eines Kurses wird mit einem Barcode-Scanner
+für den Mitglied-Ausweis realisiert.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Dazu ein Auszug aus der Aufgabenstellung:
+"Daher möchte der Verein die Anwesenheit über einen Mitgliedsausweis der in irgendeiner Weise eingescannt wird realisieren"
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+Kerntechnologien: TypeScript, JavaScript, Ionic, Angular, (HTML5), JSON
